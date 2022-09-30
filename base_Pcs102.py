@@ -33,25 +33,25 @@ class DoublyLinkedList:
   
   def look_at_nodes(self):
     if self.size == 0:
-      print("Nothing to look at!")
+      print("\nNothing to look at!\n")
       return
     
     current_node = self.head
     while True:
-      print(current_node.value)
+      print("\n\n\n" + str(current_node.value) + "\n")
       if current_node == self.head and current_node == self.tail:
-        choice = input("Press 'e' for exit. ")
+        choice = input("Press 'e' for exit: ")
         while choice != 'e':
           print("Press a valid character!")
-          choice = input("Press 'e' for exit. ")
+          choice = input("Press 'e' for exit: ")
         print("Exiting this aspect.")
         break
       
       if current_node == self.head:
-        choice = input("Press 'n' for next or 'e' for exit. ")
+        choice = input("Press 'n' for next or 'e' for exit: ")
         while choice not in ['n', 'e']:
           print("Press a valid character!")
-          choice = input("Press 'n' for next or 'e' for exit. ")
+          choice = input("Press 'n' for next or 'e' for exit: ")
         if choice == 'n':
           current_node = current_node.next_node
           continue
@@ -60,10 +60,10 @@ class DoublyLinkedList:
           break
 
       if current_node == self.tail:
-        choice = input("Press 'p' for previous or 'e' for exit. ")
+        choice = input("Press 'p' for previous or 'e' for exit: ")
         while choice not in ['p', 'e']:
           print("Press a valid character!")
-          choice = input("Press 'p' for previous or 'e' for exit. ")
+          choice = input("Press 'p' for previous or 'e' for exit: ")
         if choice == 'p':
           current_node = current_node.previous_node
           continue
@@ -71,10 +71,10 @@ class DoublyLinkedList:
           print("Exiting this aspect.")
           break
       
-      choice = input("Press 'n' for next, 'p' for previous or 'e' for exit. ")
+      choice = input("Press 'n' for next, 'p' for previous or 'e' for exit: ")
       while choice not in ['n', 'p', 'e']:
         print("Press a valid character!")
-        choice = input("Press 'n' for next, 'p' for previous or 'e' for exit. ")
+        choice = input("Press 'n' for next, 'p' for previous or 'e' for exit: ")
       if choice == 'n':
         current_node = current_node.next_node
         continue
@@ -93,5 +93,12 @@ beach = DoublyLinkedList()
 beach.add_node("10. Praia do Espelho, Porto Seguro (Bahia)")
 beach.add_node("9. Baia dos Golfinhos, Praia da Pipa (Rio Grande do Norte)")
 beach.add_node("8. Cacimba do Padre, Fernando de Noronha (Pernambuco)")
+beach.add_node("7. Quarta Praia, Morro de Sao Paulo (Bahia)")
+beach.add_node("6. Praia dos Carneiros (Pernambuco)")
+beach.add_node("5. Praia de Lopes Mendes, Ilha Grande (Rio de Janeiro)")
+beach.add_node("4. Jericoacoara (Ceara)")
+beach.add_node("3. Praias de Arraial do Cabo (Rio de Janeiro)")
+beach.add_node("2. Praia de Sao Miguel dos Milagres (Alagoas)")
+beach.add_node("1. Baia do Sancho e Baia dos Porcos (Pernambuco)")
 
 beach.look_at_nodes()
